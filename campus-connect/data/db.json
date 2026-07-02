@@ -1,0 +1,96 @@
+{
+  "profile": {
+    "name": "Aarav Sharma",
+    "email": "aarav@campus.edu",
+    "role": "Student",
+    "department": "Computer Science"
+  },
+  "notices": [
+    {
+      "id": "notice-1",
+      "type": "notice",
+      "title": "Internal assessment schedule released",
+      "message": "Departments will conduct the second internal assessment from July 8. Students can check subject-wise timing in their department office.",
+      "audience": "All Students",
+      "priority": "High",
+      "createdAt": "2026-07-01T08:30:00.000Z"
+    },
+    {
+      "id": "notice-2",
+      "type": "notice",
+      "title": "Library extended hours",
+      "message": "The central library will remain open until 8:30 PM on weekdays during exam preparation week.",
+      "audience": "Students",
+      "priority": "Normal",
+      "createdAt": "2026-06-30T11:15:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-1",
+      "type": "event",
+      "title": "Tech Fest Project Expo",
+      "date": "2026-07-12",
+      "venue": "Seminar Hall A",
+      "host": "Innovation Cell",
+      "seats": 180,
+      "createdAt": "2026-06-29T10:00:00.000Z"
+    },
+    {
+      "id": "event-2",
+      "type": "event",
+      "title": "Resume Building Workshop",
+      "date": "2026-07-05",
+      "venue": "Placement Lab",
+      "host": "Career Development Cell",
+      "seats": 80,
+      "createdAt": "2026-06-28T13:00:00.000Z"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "club-1",
+      "name": "Coding Club",
+      "category": "Technical",
+      "lead": "Meera Nair",
+      "members": 124,
+      "meeting": "Friday, 4 PM"
+    },
+    {
+      "id": "club-2",
+      "name": "Cultural Society",
+      "category": "Arts",
+      "lead": "Kabir Khan",
+      "members": 92,
+      "meeting": "Wednesday, 3 PM"
+    },
+    {
+      "id": "club-3",
+      "name": "Sports Council",
+      "category": "Sports",
+      "lead": "Riya Patel",
+      "members": 156,
+      "meeting": "Monday, 5 PM"
+    }
+  ],
+  "lostFound": [
+    {
+      "id": "lost-1",
+      "type": "lost-found",
+      "item": "Black calculator",
+      "place": "Physics Lab",
+      "status": "Found",
+      "contact": "laboffice@campus.edu",
+      "createdAt": "2026-07-01T07:45:00.000Z"
+    },
+    {
+      "id": "lost-2",
+      "type": "lost-found",
+      "item": "Blue water bottle",
+      "place": "Basketball court",
+      "status": "Lost",
+      "contact": "sportsdesk@campus.edu",
+      "createdAt": "2026-06-30T12:20:00.000Z"
+    }
+  ]
+}

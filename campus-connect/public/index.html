@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">CC</div><div><strong>Campus Connect</strong><span>Student hub</span></div></div>
+      <nav aria-label="Main sections">
+        <button class="nav-link active" data-section="dashboard">Dashboard</button>
+        <button class="nav-link" data-section="notices">Notices</button>
+        <button class="nav-link" data-section="events">Events</button>
+        <button class="nav-link" data-section="clubs">Clubs</button>
+        <button class="nav-link" data-section="lostfound">Lost & Found</button>
+      </nav>
+      <div class="profile-card"><span id="profileRole">Student</span><strong id="profileName">Loading...</strong><small id="profileDept">Department</small></div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><div><p class="eyebrow">College community portal</p><h1 id="pageTitle">Dashboard</h1></div><button class="primary-btn" id="openLogin">Update Profile</button></header>
+      <section class="hero-panel"><div><p class="eyebrow">Today on campus</p><h2>Everything students need, gathered in one place.</h2><p>Track notices, upcoming events, active clubs, and lost items from a simple college portal.</p></div><div class="hero-art" aria-hidden="true"><div class="campus-window"></div><div class="campus-lines"></div></div></section>
+      <section class="stats-grid" id="statsGrid"></section>
+      <section class="section active" id="dashboard"><div class="split-grid"><article class="panel"><div class="panel-heading"><h2>Latest Notices</h2><span id="noticeCount">0</span></div><div class="list" id="dashboardNotices"></div></article><article class="panel"><div class="panel-heading"><h2>Upcoming Events</h2><span id="eventCount">0</span></div><div class="list" id="dashboardEvents"></div></article></div></section>
+      <section class="section" id="notices"><div class="split-grid wide-left"><article class="panel"><div class="panel-heading"><h2>Notice Board</h2></div><div class="list" id="noticeList"></div></article><article class="panel form-panel"><h2>Post Notice</h2><form id="noticeForm"><label>Title<input name="title" required placeholder="Exam schedule"></label><label>Message<textarea name="message" required placeholder="Write the notice details"></textarea></label><label>Audience<input name="audience" placeholder="All Students"></label><label>Priority<select name="priority"><option>Normal</option><option>High</option><option>Urgent</option></select></label><button class="primary-btn" type="submit">Publish Notice</button></form></article></div></section>
+      <section class="section" id="events"><div class="split-grid wide-left"><article class="panel"><div class="panel-heading"><h2>Events</h2></div><div class="card-grid" id="eventList"></div></article><article class="panel form-panel"><h2>Add Event</h2><form id="eventForm"><label>Title<input name="title" required placeholder="Workshop name"></label><label>Date<input type="date" name="date" required></label><label>Venue<input name="venue" required placeholder="Auditorium"></label><label>Host<input name="host" placeholder="Club or department"></label><label>Seats<input type="number" name="seats" min="1" placeholder="100"></label><button class="primary-btn" type="submit">Add Event</button></form></article></div></section>
+      <section class="section" id="clubs"><article class="panel"><div class="panel-heading"><h2>Campus Clubs</h2></div><div class="card-grid" id="clubList"></div></article></section>
+      <section class="section" id="lostfound"><div class="split-grid wide-left"><article class="panel"><div class="panel-heading"><h2>Lost & Found Desk</h2></div><div class="list" id="lostFoundList"></div></article><article class="panel form-panel"><h2>Report Item</h2><form id="lostFoundForm"><label>Item<input name="item" required placeholder="ID card"></label><label>Place<input name="place" required placeholder="Canteen"></label><label>Status<select name="status"><option>Found</option><option>Lost</option></select></label><label>Contact<input name="contact" placeholder="email@campus.edu"></label><button class="primary-btn" type="submit">Submit Report</button></form></article></div></section>
+    </main>
+  </div>
+  <dialog id="loginDialog"><form method="dialog" class="dialog-card" id="loginForm"><div class="panel-heading"><h2>Profile</h2><button class="ghost-btn" value="cancel">Close</button></div><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" required placeholder="you@campus.edu"></label><label>Role<select name="role"><option>Student</option><option>Faculty</option><option>Admin</option></select></label><label>Department<input name="department" placeholder="Computer Science"></label><button class="primary-btn" type="submit">Save Profile</button></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
